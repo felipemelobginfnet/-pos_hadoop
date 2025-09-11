@@ -1,0 +1,42 @@
+# Criar diretório base no HDFS para o Olist
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist
+
+# Customers
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/customers
+gsutil cp gs://olist-csv-bucket/olist/olist_customers_dataset/olist_customers_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_customers_dataset.csv /user/felipe_gusmao/olist/customers/
+
+# Orders
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/orders
+gsutil cp gs://olist-csv-bucket/olist/olist_orders_dataset/olist_orders_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_orders_dataset.csv /user/felipe_gusmao/olist/orders/
+
+# Order Items
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/order_items
+gsutil cp gs://olist-csv-bucket/olist/olist_order_items_dataset/olist_order_items_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_order_items_dataset.csv /user/felipe_gusmao/olist/order_items/
+
+# Products
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/products
+gsutil cp gs://olist-csv-bucket/olist/olist_products_dataset/olist_products_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_products_dataset.csv /user/felipe_gusmao/olist/products/
+
+# Sellers
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/sellers
+gsutil cp gs://olist-csv-bucket/olist/olist_sellers_dataset/olist_sellers_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_sellers_dataset.csv /user/felipe_gusmao/olist/sellers/
+
+# Order Payments
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/order_payments
+gsutil cp gs://olist-csv-bucket/olist/olist_order_payments_dataset/olist_order_payments_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_order_payments_dataset.csv /user/felipe_gusmao/olist/order_payments/
+
+# Order Reviews
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/order_reviews
+gsutil cp gs://olist-csv-bucket/olist/olist_order_reviews_dataset/olist_order_reviews_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_order_reviews_dataset.csv /user/felipe_gusmao/olist/order_reviews/
+
+# Geolocation
+hdfs dfs -mkdir -p /user/felipe_gusmao/olist/geolocation
+gsutil cp gs://olist-csv-bucket/olist/olist_geolocation_dataset/olist_geolocation_dataset.csv /tmp/
+hdfs dfs -put /tmp/olist_geolocation_dataset.csv /user/felipe_gusmao/olist/geolocation/
